@@ -33,6 +33,21 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       position: relative;
     }
+    .theme-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .theme-toggle-wrapper {
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-bottom: 0;
+  }
+}
     .theme-toggle {
       position: absolute;
       top: 20px;
@@ -138,11 +153,13 @@
 </head>
 <body>
   <header>
-    <button class="theme-toggle" onclick="toggleTheme()">🌗 Theme</button>
+    <div class="theme-toggle-wrapper">
+      <button class="theme-toggle" onclick="toggleTheme()">🌗 Theme</button>
+    </div>
     <h1>Vansh Umraliya</h1>
     <p class="subtitle">DevOps Engineer | AWS Certified | Linux Lover</p>
   </header>
-
+  
   <section>
     <div class="card contact-section" data-aos="fade-up">
       <h2>📨 Contact</h2>
